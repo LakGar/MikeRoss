@@ -1,0 +1,34 @@
+.screen {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0.2;
+}
+
+.main {
+  flex: 1;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 20px;
+}
+
+p {
+  font-size: 18px;
+}

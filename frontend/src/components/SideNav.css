@@ -1,0 +1,162 @@
+/* Sidebar Container */
+.side-nav {
+  background-color: #f7f4f0; /* Light beige background */
+  width: 240px;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease; /* Smoother transition */
+  padding-top: 20px;
+  position: relative;
+  border-right: 1px solid #c1b7ac; /* Muted light beige border */
+}
+
+.side-nav.collapsed {
+  width: 60px; /* Adjust the width when collapsed */
+}
+
+/* Logo Section */
+.nav-logo {
+  text-align: center;
+  font-weight: bold;
+  color: #4a392d; /* Muted brown for logo text */
+  margin-top: 40px;
+  padding-left: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1px; /* Increase gap between logo elements */
+  font-size: 24px; /* Larger logo text */
+}
+
+/* Navigation Links */
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly larger gap between items */
+}
+
+.nav-links ul li {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: #6b4f3d; /* Default muted brown for link text */
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  position: relative;
+}
+
+.nav-links ul li:hover {
+  transform: scale(1.05); /* Subtle hover effect */
+  color: #4a392d; /* Darker brown on hover */
+}
+
+/* Span for text next to icons */
+.nav-links ul li span {
+  margin-left: 12px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif; /* Professional sans-serif font */
+}
+
+/* Remove underline for all links */
+.nav-links ul li a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent li */
+}
+
+/* Active Link Styling */
+.nav-links ul li .active {
+  color: #6b4f3d; /* Active color muted brown */
+  text-decoration: none; /* Remove underline */
+  transform: scale(1.1);
+}
+
+/* Upcoming Tag Styling */
+.upcoming-tag {
+  background-color: #6b4f3d; /* Muted brown for tags */
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: auto;
+  position: absolute;
+  right: -20px;
+  font-family: "Roboto", sans-serif;
+  transform: scale(0.7);
+}
+
+/* Toggle Button Styling */
+.toggle-button {
+  text-align: center;
+  cursor: pointer;
+  color: #6b4f3d; /* Muted brown */
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+}
+
+/* Profile Section */
+.profileButton {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-top: 1px solid #c1b7ac; /* Muted beige border */
+  padding-top: 10px;
+}
+
+.profileImgSmall {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0ded9; /* Subtle border around the profile image */
+}
+
+.profileButton:hover {
+  transform: scale(1.05); /* Subtle scale effect */
+}
+
+.nameAndOccupation {
+  flex: 1;
+  margin-left: 12px;
+  font-size: 16px;
+  color: #4a392d; /* Darker muted brown for profile text */
+}
+
+.nameSideNav {
+  color: #4a392d; /* Darker muted brown for name */
+  font-weight: 600;
+}
+
+/* Active Link Styling */
+.active {
+  color: #6b4f3d; /* Color for active link */
+  text-decoration: none; /* Remove underline */
+  transform: scale(1.1);
+}
+
+/* Default state links */
+.nav-links ul li a {
+  color: #6b4f3d; /* Default muted brown color */
+  text-decoration: none;
+}
+
+/* Profile Styling */
+.profile {
+  color: transparent; /* To be filled later */
+}

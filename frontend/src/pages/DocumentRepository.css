@@ -1,0 +1,285 @@
+/* Screen Layout */
+.screen {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.left {
+  /* Can be used for side navigation or any other content */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Section */
+.top {
+  /* Optional top bar styles */
+}
+
+/* Repository Container */
+.repository-container {
+  padding: 20px;
+  background-color: #f7f4f0; /* Light beige background */
+  margin: 20px;
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Toolbar for sorting and searching */
+.repository-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sort-options {
+  display: flex;
+  align-items: center;
+}
+
+.sort-options select {
+  padding: 8px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: 1px solid #c1b7ac; /* Muted beige border */
+  background-color: transparent;
+  font-size: 14px;
+  color: #4a392d; /* Muted brown for text */
+  transition: border-color 0.3s ease;
+}
+
+.sort-options select:focus {
+  outline: none;
+  border-color: #6b4f3d; /* Darker brown on focus */
+}
+
+/* Document List Grid */
+.document-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Document Item */
+.document-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for subtle depth */
+}
+
+.document-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow on hover */
+}
+
+/* Document Item Top Section */
+.document-item .item-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.document-info p {
+  margin: 5px 0;
+  color: #4a392d; /* Muted brown for document text */
+  font-size: 15px;
+  font-family: "Roboto", sans-serif; /* Professional sans-serif font */
+}
+
+/* Document Actions */
+.document-actions .action-btn {
+  background-color: #6b4f3d; /* Muted brown for action buttons */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #8c6b53; /* Lighter brown on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+}
+
+.action-btn svg {
+  margin-right: 5px;
+}
+
+/* PDF Icon */
+.pdf-icon {
+  width: 80px;
+  height: 90px;
+  margin-right: 10px;
+}
+
+/* Document Item Layout */
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #c1b7ac; /* Muted beige border for better separation */
+}
+
+/* Thumbnail for Document */
+.document-thumbnail {
+  flex: 0 0 50px;
+}
+
+.document-info {
+  flex: 1;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Document Actions Container */
+.document-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Star Button */
+.star-button {
+  height: 100%;
+  color: #ffc107; /* Yellow for starred items */
+  cursor: pointer;
+}
+
+/* Empty State for when there are no documents */
+.empty-state {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.empty-state-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.empty-state-text {
+  font-size: 18px;
+  color: #6b4f3d; /* Muted brown for empty state text */
+  font-family: "Roboto", sans-serif;
+}
+
+/* Hover Effects */
+.sort-options select:hover {
+  border-color: #8c6b53; /* Slightly lighter brown on hover */
+}
+
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  width: 80%; /* Wider modal */
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f7f4f0; /* Light beige */
+  border-bottom: 1px solid #ddd;
+  color: #4a392d; /* Muted brown text */
+}
+
+/* Close button (text style) */
+.close-btn {
+  color: grey; /* Grey text */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff5e57; /* Red hover */
+}
+
+/* Modal body */
+.modal-body {
+  padding: 20px;
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  background-color: white; /* White background for body */
+}
+
+/* Scrollable PDF container */
+.pdf-preview-container {
+  height: 95%;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid red; /* Light border around preview */
+  border-radius: 4px; /* Rounded corners to fit the modal theme */
+  margin-bottom: 10px;
+}
+
+/* Modal footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: #f7f4f0; /* Light beige background */
+  border-top: 1px solid #ddd;
+}
+
+/* Analyze button */
+.analyze-btn {
+  background-color: #6b4f3d; /* Brown background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.analyze-btn:hover {
+  background-color: #8c6b53; /* Lighter brown on hover */
+}

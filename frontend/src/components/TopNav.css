@@ -1,0 +1,98 @@
+/* Top Navigation Bar */
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f4f0; /* Light beige background */
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #c1b7ac; /* Subtle light brown border */
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  max-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* Space for the search icon */
+  border: 1px solid #c1b7ac; /* Light beige border */
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #4a392d; /* Muted brown for text */
+  height: 40px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #6b4f3d; /* Darker brown on focus */
+}
+
+/* Placeholder Styling */
+.search-input::placeholder {
+  color: #aaa;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 16px;
+  color: #aaa; /* Grey icon */
+}
+
+/* Navigation Icons Container */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Individual Icon Styling */
+.icon {
+  font-size: 17px;
+  color: #4a392d; /* Muted brown for icons */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #6b4f3d; /* Darker brown on hover */
+}
+
+/* User Profile Container */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* User Profile Image */
+.user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd; /* Light border around the profile image */
+}
+
+/* User Name Styling */
+.user-name {
+  font-size: 17px;
+  color: #4a392d; /* Muted brown for name */
+  font-weight: bold;
+  font-family: "Roboto", sans-serif; /* Professional sans-serif font */
+  transition: color 0.3s ease;
+}
+
+.user-name:hover {
+  color: #6b4f3d; /* Darker brown on hover */
+}
